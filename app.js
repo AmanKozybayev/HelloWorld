@@ -1,5 +1,24 @@
 console.log('hello world!');
 
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("vvedite pervoe chislo ", function(a) {
+    rl.question("vvedite vtoroe chislo ", function(b) {
+        a=Number(a);
+        b=Number(b);
+        console.log(a+b);
+        rl.close();
+    });
+});
+
+rl.on("close", function() {
+    console.log("\nBYE BYE !!!");
+    process.exit(0);
+});
 // class human {
 //     let head; 
 //     let body; 
